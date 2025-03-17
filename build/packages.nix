@@ -96,12 +96,11 @@ in
 
 {
   python,
-  newScope,
   buildPackages,
   stdenv,
   pkgs,
 }:
-makeScope newScope (
+(
   final:
   {
     # Create a dummy mkVirtualEnv function to make nixdoc happy
