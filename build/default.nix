@@ -10,7 +10,7 @@ lib.fix (
   in
   {
     inherit mkExtension;
-    packages = { newScope, callPackage, ... }: lib.makeScope newScope (callPackage mkExtension { });
+    packages = { newScope, callPackage, python, ... }: lib.makeScope newScope (callPackage mkExtension { inherit python; });
     lib = import ./lib { inherit lib pyproject-nix; };
     hacks = import ./hacks;
     util = import ./util;
